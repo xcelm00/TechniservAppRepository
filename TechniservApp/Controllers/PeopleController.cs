@@ -6,12 +6,14 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using NLog;
 using TechniservApp.Models;
 
 namespace TechniservApp.Controllers
 {
     public class PeopleController : Controller
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: People
